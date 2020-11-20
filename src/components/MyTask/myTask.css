@@ -1,0 +1,60 @@
+.task-row {
+    width: -webkit-fill-available;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    background-color: lightblue;
+    margin: 0px;
+}
+
+.task-header {
+    margin-top: 5px;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.font-xxsmall {
+    font-size: xx-small;
+}
+
+.font-xsmall {
+    font-size: x-small;
+}
+
+.font-small {
+    font-size: small;
+}
+
+.task-row>div {
+    border: 1px solid rgb(85, 44, 231);
+    margin: 0px;
+    height: 100%;
+    padding: 0px;
+}
+
+.task-row .task-nostart {
+    background-color: lightgreen;
+}
+
+.task-row .task-work {
+    background-color: lightyellow;
+}
+
+.task-row .task-finish {
+    background-color: lightblue;
+}
+
+.task-row .task-nostart,
+.task-finish,
+.task-work {
+    margin: auto;
+}
+
+
+/* .task-row .task-nostart,
+.task-finish,
+.task-work:fullscreen {
+    overflow-y: scroll;
+} */

@@ -1,0 +1,124 @@
+.font-label {
+    font-size: x-small;
+    font-weight: normal;
+}
+
+.margin-top-item {
+    margin-top: 10px;
+}
+
+.task-examine {
+    width: 95%;
+    height: 90%;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+}
+
+textarea {
+    overflow-y: scroll;
+    font-size: xx-small;
+}
+
+.page-div {
+    margin-top: 5px;
+    padding: 0px;
+}
+
+.task-examine .task-examine-nav {
+    background-color: lightsteelblue;
+    padding: 0%;
+    min-height: 550px;
+    max-height: 100%;
+}
+
+.task-examine .task-examine-nav ul {
+    list-style: none;
+}
+
+.task-examine .task-examine-nav ul li {
+    width: 100%;
+    color: white;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    padding-top: 7.5px;
+}
+
+.task-examine .task-examine-nav ul li span {
+    padding-left: 10%;
+}
+
+.task-examine .task-examine-nav ul li:nth-child(even) {
+    background-color: lightskyblue;
+}
+
+.task-examine .task-examine-nav ul li:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.task-examine .task-examine-container {
+    min-height: 550px;
+    max-height: 100%;
+    background-color: rgb(188, 212, 247);
+    padding: 0px;
+}
+
+.task-examine .task-examine-container .task-examine-container-title {
+    height: 40px;
+    background-color: skyblue;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.task-examine .task-examine-container .task-examine-container-title .item-div {
+    padding: 0%;
+}
+
+.task-examine .task-examine-container .task-examine-container-list {
+    border: 2px inset skyblue;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list {
+    list-style: none;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list:fullscreen {
+    overflow: scroll;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list li {
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-size: small;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 40px;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list li>div {
+    border-right: 1px solid black;
+    height: 100%;
+    text-align: center;
+    padding: 0%;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list li:nth-child(even) {
+    background-color: skyblue;
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list li:nth-child(odd) {
+    background-color: rgb(140, 181, 214);
+}
+
+.task-examine .task-examine-container .task-examine-container-list .task-examine-item-list li:not(:first-child):hover {
+    background-color: turquoise;
+}
+
+.task-examine-second-row {
+    border-right: 1px solid black;
+    height: 100%;
+    text-align: center;
+    padding: 0%;
+    margin-left: 10px;
+}

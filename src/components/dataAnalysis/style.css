@@ -1,0 +1,23 @@
+.item {
+    width: 100%;
+    height: 100%;
+}
+
+.item .up-item {
+    width: 100%;
+    height: 70%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.item .up-item>div {
+    border: 1px outset lightblue;
+    height: 100%;
+}
+
+.item .down-item {
+    width: 100%;
+    height: 30%;
+    margin: 0px;
+    padding: 0px;
+}
