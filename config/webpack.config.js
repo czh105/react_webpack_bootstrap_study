@@ -1,25 +1,24 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+//const webpack = require('webpack');
+//const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const glob = require('glob');
 const { template } = require('@babel/core');
-const distPath = path.join(__dirname,'..','/build/');
+
 
 var getEntry = function(url){
     var entry = {};
     //console.log(glob.sync(url));
     glob.sync(url).forEach(function(name){
-        var filename = '';
-        console.log(name);
-        if(name.indexOf('views') != -1){
+        var filename = ''; 
+        if(name.indexOf('views') !== -1){
              //是html页面
              filename = name.substring((name.lastIndexOf('/')+1),name.lastIndexOf('.'));
         }
         else if(name.substring((name.lastIndexOf('.')),name.length) == '.js'){
              filename = name.substring((name.lastIndexOf('/') + 1),name.lastIndexOf('.'));
         }  
-        if(filename != ''){
+        if(filename !== ''){
             
             entry[filename]=name;
         } 
@@ -59,7 +58,7 @@ module.exports={
     entry:entryJs,
     output:{
         path:path.resolve(__dirname,"../build"),
-        filename:'js/[name].min.js',
+        filename:'js/[name].build.js',
         //网站运行时的访问路径，不设置的话，打包出的html中的默认引用的路径会是相对路径
         publicPath:'/build/'
     },
@@ -81,21 +80,14 @@ module.exports={
             {
                 test:/\.css$/,
                 exclude:/node_modules/,
-                use: [
-                    // [style-loader](/loaders/style-loader)
-                    { loader: 'style-loader' },
-                    // [css-loader](/loaders/css-loader)
-                    {
-                      loader: 'css-loader',
-                      options: {
-                        modules: true
-                      }
-                    }
-                    // [sass-loader](/loaders/sass-loader)
+                use:{ loader: 'style-loader' },
                     
-                  ]    
-                
-            },{
+            },
+            {
+                test:/\.css$/,
+                use:{loader:'css-loader'}
+            },
+            {
                 test:/\.(png|jpe?g|gif|svg)$/,
                 loader:'url-loader',
                 options:{
@@ -104,6 +96,7 @@ module.exports={
                 }
             }]
     },
-    plugins:plugins
+    plugins:plugins,
+    watch:true
 }
 
